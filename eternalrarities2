@@ -160,6 +160,18 @@ do
                      farm15()
                   end
                end)
+  do 
+        section:addSlider({
+            text = 'Tp time',
+            min = 0.01,
+            max = 15,
+            step = 0.01,
+            val = 50
+        }, function(newValue) 
+            print(newValue)
+getgenv().multspeed1 = (newValue)
+        end):setTooltip('set the time')
+
       local section = menu:addSection({
         text = 'Rune',
         side = 'right',
