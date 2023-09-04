@@ -319,7 +319,7 @@ end
 noclip() -- to toggle noclip() and clip()
          -- Call a function when clicked
             ui.notify({
-                title = 'OtoHub',
+                title = 'ScriptX',
                 message = 'Noclip Executed!',
                 duration = 3
             })
@@ -345,7 +345,7 @@ end)
 tool.Parent = plr.Backpack
          -- Call a function when clicked
             ui.notify({
-                title = 'OtoHub',
+                title = 'ScriptX',
                 message = 'TeleportTool Gived!',
                 duration = 3
             })
@@ -373,7 +373,7 @@ UIS.InputBegan:connect(function(UserInput)
     end
 end)-- Call a function when clicked
             ui.notify({
-                title = 'OtoHub',
+                title = 'ScriptX',
                 message = 'InfiniteJump Executed!',
                 duration = 3
             })
@@ -387,15 +387,15 @@ function farm5()
     spawn(function()
        while getgenv().farm_5b == true do
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.850723266601562, 6.115842342376709, -53.59778594970703)
-             wait(0.3)
+             wait(0.5)
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(15.10219669342041, 5.642571449279785, -90.09696197509766)
-             wait(0.3)
+             wait(0.5)
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.592691421508789, 5.467858791351318, -90.37836456298828)
-             wait(0.3)
+             wait(0.5)
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.6898682713508606, 5.467858791351318, -90.27534484863281)
-             wait(0.3)
+             wait(0.5)
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.647994518280029, 5.467859268188477, -90.24512481689453)
-             wait(0.3)
+             wait(0.5)
        end
     end)
 end
