@@ -140,26 +140,6 @@ do
                      farm13()
                   end
                end)
-            local toggle = section:addToggle({
-               text = 'Roll and Luck y',
-               state = false
-            })
-               toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_14b = newState
-                  if newState then
-                     farm14()
-                  end
-               end)
-            local toggle = section:addToggle({
-               text = 'Roll and Luck &',
-               state = false
-            })
-               toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_15b = newState
-                  if newState then
-                     farm15()
-                  end
-               end)
   do 
         section:addSlider({
             text = 'Tp time',
