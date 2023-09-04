@@ -1,5 +1,5 @@
 local uiLoader = loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/dollarware/main/library.lua'))
-
+print("oto choosed shitty library")
 local ui = uiLoader({
     rounding = true,
     theme = 'raspberry', -- The theme. Available themes are: cherry, orange, lemon, lime, raspberry, blueberry, grape, watermelon
