@@ -386,6 +386,7 @@ end
 function farm5()
     spawn(function()
        while getgenv().farm_5b == true do
+	     game:GetService("Players"):Chat("/e dance")
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.850723266601562, 6.115842342376709, -53.59778594970703)
              wait(0.2)
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(15.10219669342041, 5.642571449279785, -90.09696197509766)
@@ -403,6 +404,7 @@ end
 function farm6()
     spawn(function()
         while getgenv().farm_6b == true do
+game:GetService("Players"):Chat("/e dance")
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
              wait(0.7)
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.624143600463867, 4.250003814697266, -41.928009033203125)
@@ -414,6 +416,7 @@ end
 function farm7()
    spawn(function()
       while getgenv().farm_7b == true do
+game:GetService("Players"):Chat("/e dance")
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
              wait(0.7)
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3.223173141479492, 4.250003814697266, -41.81907653808594)
