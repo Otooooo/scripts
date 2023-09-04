@@ -43,7 +43,7 @@ local window = ui.newWindow({
     }),
     text = 'Eternal Rarities 2',
     resize = true,
-    size = Vector2.new(1000, 1000),
+    size = Vector2.new(300, 1000),
     position = nil
 })
 do
