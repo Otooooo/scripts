@@ -1,0 +1,554 @@
+local uiLoader = loadstring(game:HttpGet('https://raw.githubusercontent.com/topitbopit/dollarware/main/library.lua'))
+
+local ui = uiLoader({
+    rounding = true,
+    theme = 'raspberry', -- The theme. Available themes are: cherry, orange, lemon, lime, raspberry, blueberry, grape, watermelon
+    smoothDragging = true
+})
+
+--- Getgenv ---
+getgenv().multspeed1 = 1.5
+getgenv().multspeed2 = 0.3
+getgenv().singlespeed = 0.5
+getgenv().farm2 = 0
+getgenv().attempts = 15
+getgenv().farm_1b = false
+getgenv().farm_2b = false
+getgenv().farm_3b = false
+getgenv().farm_4b = false
+getgenv().farm_5b = false
+getgenv().farm_6b = false
+getgenv().farm_7b = false
+getgenv().farm_8b = false
+getgenv().farm_9b = false
+getgenv().farm_10b = false
+getgenv().farm_11b = false
+getgenv().farm_12b = false
+getgenv().farm_13b = false
+getgenv().farm_14b = false
+getgenv().farm_15b = false
+getgenv().farm_16b = false
+getgenv().farm_17b = false
+getgenv().farm_18b = false
+getgenv().farm_19b = false
+getgenv().farm_20b = false
+getgenv().farm_21b = false
+getgenv().farm_22b = false
+
+local window = ui.newWindow({
+    ui.notify({
+        title = 'ScriptX',
+        message = '               Thanks For Using!                                              Eternal        Rarities    2       Script ',
+        duration = 10
+    }),
+    text = 'Eternal Rarities 2',
+    resize = true,
+    size = Vector2.new(550, 400),
+    position = nil
+})
+do
+--- Menu 1 ---
+   local menu = window:addMenu({
+        text = 'Main'
+   })
+   do
+      local section = menu:addSection({
+        text = 'Farms',
+        side = 'left',
+        showMinButton = true,
+      })
+         section:addLabel({
+            text = '[!Flash Warning!]'
+         })
+            local toggle = section:addToggle({
+               text = 'Roll and Rebirth',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_5b = newState
+                  if newState then
+                     farm5()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Prestige',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_6b = newState
+                  if newState then
+                     farm6()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Transcend',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_7b = newState
+                  if newState then
+                     farm7()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Luck**',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_8b = newState
+                  if newState then
+                     farm8()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Luck^',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_10b = newState
+                  if newState then
+                     farm10()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Luck^^',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_11b = newState
+                  if newState then
+                     farm11()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and luck a',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_12b = newState
+                  if newState then
+                     farm12()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Luck b',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_13b = newState
+                  if newState then
+                     farm13()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Luck y',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_14b = newState
+                  if newState then
+                     farm14()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Roll and Luck &',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_15b = newState
+                  if newState then
+                     farm15()
+                  end
+               end)
+      local section = menu:addSection({
+        text = 'Rune',
+        side = 'right',
+        showMinButton = true,
+      })
+              local toggle = section:addToggle({
+               text = 'Novice Rune',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_16b = newState
+                  if newState then
+                     farm16()
+                  end
+               end)
+                             local toggle = section:addToggle({
+               text = 'Advanced Rune',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_17b = newState
+                  if newState then
+                     farm17()
+                  end
+               end)
+                             local toggle = section:addToggle({
+               text = 'Event Rune',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_18b = newState
+                  if newState then
+                     farm18()
+                  end
+               end)
+                             local toggle = section:addToggle({
+               text = 'Season Rune',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_19b = newState
+                  if newState then
+                     farm19()
+                  end
+               end)
+                             local toggle = section:addToggle({
+               text = 'Currencies Rune',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_20b = newState
+                  if newState then
+                     farm20()
+                  end
+               end)
+                             local toggle = section:addToggle({
+               text = 'Ores Rune',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_21b = newState
+                  if newState then
+                     farm21()
+                  end
+               end)
+                                            local toggle = section:addToggle({
+               text = 'Size Rune',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_22b = newState
+                  if newState then
+                     farm22()
+                  end
+               end)
+                     local section = menu:addSection({
+        text = 'Time Rune',
+        side = 'right',
+        showMinButton = true,
+      })
+                         section:addButton({
+            text = 'Hourly Rune', 
+            style = 'small' -- style of the button, can be 'large' or 'small'
+        }):bindToEvent('onClick', function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(886.1956787109375, 4.250001430511475, 309.2615966796875)
+        end)
+                                 section:addButton({
+            text = 'Daily Rune', 
+            style = 'small' -- style of the button, can be 'large' or 'small'
+        }):bindToEvent('onClick', function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(917.1807250976562, 4.250001430511475, 309.4670715332031)
+        end)
+                                      section:addButton({
+            text = 'Weekly Rune', 
+            style = 'small' -- style of the button, can be 'large' or 'small'
+        }):bindToEvent('onClick', function()
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(946.64697265625, 4.250001430511475, 309.6517639160156)
+        end)
+     local menu = window:addMenu({
+        text = 'Utility'
+   })
+   do
+        local section = menu:addSection({
+        text = 'main',
+        side = 'left',
+        showMinButton = true,
+      })
+          section:addButton({
+            text = 'Anti Cheat Bypass', 
+            style = 'large' -- style of the button, can be 'large' or 'small'
+        }):bindToEvent('onClick', function()
+        game:GetService("Players").LocalPlayer.PlayerScripts.Anti:Destroy() -- Call a function when clicked
+            ui.notify({
+                title = 'OtoHub',
+                message = 'AntiCheat bypassed!',
+                duration = 3
+            })
+        end)
+           do 
+        section:addSlider({
+            text = 'Walkspeed',
+            min = 16,
+            max = 100,
+            step = 0.1,
+            val = 10
+        }, function(s)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+            print(newValue)
+        end):setTooltip('FASTTT!!')
+                  section:addButton({
+            text = 'Noclip', 
+            style = 'small' -- style of the button, can be 'large' or 'small'
+        }):bindToEvent('onClick', function()
+        local Noclip = nil
+local Clip = nil
+
+function noclip()
+	Clip = false
+	local function Nocl()
+		if Clip == false and game.Players.LocalPlayer.Character ~= nil then
+			for _,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+				if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+					v.CanCollide = false
+				end
+			end
+		end
+		wait(0.21) -- basic optimization
+	end
+	Noclip = game:GetService('RunService').Stepped:Connect(Nocl)
+end
+
+function clip()
+	if Noclip then Noclip:Disconnect() end
+	Clip = true
+end
+
+noclip() -- to toggle noclip() and clip()
+         -- Call a function when clicked
+            ui.notify({
+                title = 'OtoHub',
+                message = 'Noclip Executed!',
+                duration = 3
+            })
+        end)
+                  section:addButton({
+            text = 'Teleport Tool', 
+            style = 'large' -- style of the button, can be 'large' or 'small'
+        }):bindToEvent('onClick', function()
+        local plr = game:GetService("Players").LocalPlayer
+local mouse = plr:GetMouse()
+
+local tool = Instance.new("Tool")
+tool.RequiresHandle = false
+tool.Name = "Click Teleport"
+
+tool.Activated:Connect(function()
+local root = plr.Character.HumanoidRootPart
+local pos = mouse.Hit.Position+Vector3.new(0,2.5,0)
+local offset = pos-root.Position
+root.CFrame = root.CFrame+offset
+end)
+
+tool.Parent = plr.Backpack
+         -- Call a function when clicked
+            ui.notify({
+                title = 'OtoHub',
+                message = 'TeleportTool Gived!',
+                duration = 3
+            })
+        end)
+                  section:addButton({
+            text = 'Infinite Jump', 
+            style = 'large' -- style of the button, can be 'large' or 'small'
+        }):bindToEvent('onClick', function()
+         local Player = game:GetService'Players'.LocalPlayer;
+local UIS = game:GetService'UserInputService';
+
+_G.JumpHeight = 50;
+
+function Action(Object, Function) if Object ~= nil then Function(Object); end end
+
+UIS.InputBegan:connect(function(UserInput)
+    if UserInput.UserInputType == Enum.UserInputType.Keyboard and UserInput.KeyCode == Enum.KeyCode.Space then
+        Action(Player.Character.Humanoid, function(self)
+            if self:GetState() == Enum.HumanoidStateType.Jumping or self:GetState() == Enum.HumanoidStateType.Freefall then
+                Action(self.Parent.HumanoidRootPart, function(self)
+                    self.Velocity = Vector3.new(0, _G.JumpHeight, 0);
+                end)
+            end
+        end)
+    end
+end)-- Call a function when clicked
+            ui.notify({
+                title = 'OtoHub',
+                message = 'InfiniteJump Executed!',
+                duration = 3
+            })
+        end)
+end
+
+
+---Single Functions ---
+
+function farm5()
+    spawn(function()
+       while getgenv().farm_5b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.850723266601562, 6.115842342376709, -53.59778594970703)
+             wait(0.1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(15.10219669342041, 5.642571449279785, -90.09696197509766)
+             wait(0.1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.592691421508789, 5.467858791351318, -90.37836456298828)
+             wait(0.1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.6898682713508606, 5.467858791351318, -90.27534484863281)
+             wait(0.1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.647994518280029, 5.467859268188477, -90.24512481689453)
+             wait(0.1)
+       end
+    end)
+end
+
+function farm6()
+    spawn(function()
+        while getgenv().farm_6b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
+             wait(0.7)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.624143600463867, 4.250003814697266, -41.928009033203125)
+             wait(0.1)
+        end
+    end)
+end
+
+function farm7()
+   spawn(function()
+      while getgenv().farm_7b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
+             wait(0.7)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3.223173141479492, 4.250003814697266, -41.81907653808594)
+             wait(0.1)
+      end
+   end)
+end
+
+function farm8()
+   spawn(function()
+      while getgenv().farm_8b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
+             wait(0.7)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9.204687118530273, 4.250003814697266, -42.11802291870117)
+             wait(0.1)
+      end
+   end)
+end
+
+function farm10()
+    spawn(function()
+       while getgenv().farm_10b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
+             wait(0.7)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(24.51068687438965, 4.250003814697266, -42.25160598754883)
+             wait(0.1)
+       end
+    end)
+end
+function farm11()
+    spawn(function()
+       while getgenv().farm_11b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
+             wait(0.7)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37.059322357177734, 4.250003814697266, -42.39055252075195)
+             wait(0.1)
+       end
+    end)
+end
+function farm12()
+    spawn(function()
+       while getgenv().farm_12b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
+             wait(0.7)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(52.54084014892578, 4.250003814697266, -42.553306579589844)
+             wait(0.1)
+       end
+    end)
+end
+function farm13()
+    spawn(function()
+       while getgenv().farm_13b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
+             wait(0.7)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(54.93696594238281, 4.250003814697266, -28.711669921875)
+             wait(0.1)
+       end
+    end)
+end
+function farm14()
+    spawn(function()
+       while getgenv().farm_14b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
+             wait(0.7)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(54.532440185546875, 4.250003814697266, -14.839485168457031)
+             wait(0.1)
+       end
+    end)
+end
+function farm15()
+    spawn(function()
+       while getgenv().farm_15b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
+             wait(0.7)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(53.66870880126953, 4.250003814697266, 1.373721718788147)
+             wait(0.1)
+       end
+    end)
+end
+function farm16()
+    spawn(function()
+       while getgenv().farm_16b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5.125272274017334, 4, 48.584373474121094) 
+             wait(0.1)
+       end -- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.645734786987305, 4.250003814697266, 49.038658142089844)
+    end)
+end
+function farm17()
+    spawn(function()
+       while getgenv().farm_17b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(22.645734786987305, 4, 49.038658142089844)
+             wait(0.1) -- game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(95.35249328613281, 4.200003623962402, 47.10945129394531)
+       end
+    end)
+end
+function farm18()
+    spawn(function()
+       while getgenv().farm_18b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(95.35249328613281, 4, 47.10945129394531)
+             wait(0.1)
+       end
+    end)
+end
+function farm19()
+    spawn(function()
+       while getgenv().farm_19b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(623.7406005859375, 4, 287.49224853515625)
+             wait(0.1)
+       end
+    end)
+end
+function farm20()
+    spawn(function()
+       while getgenv().farm_20b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(652.1454467773438, 4, 288.5512390136719)
+             wait(0.1)
+       end
+    end)
+end
+function farm21()
+    spawn(function()
+       while getgenv().farm_21b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(624.1036987304688, 4, 189.66033935546875)
+             wait(0.1)
+       end
+    end)
+end
+function farm22()
+    spawn(function()
+       while getgenv().farm_22b == true do
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(651.8984985351562, 4, 190.1234588623047)
+             wait(0.1)
+       end
+    end)
+end
+end
+end
+end
