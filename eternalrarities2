@@ -92,7 +92,7 @@ do
                   end
                end)
             local toggle = section:addToggle({
-               text = 'Roll and Luck**',
+               text = 'Roll and Rocket Fuel',
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
@@ -102,7 +102,7 @@ do
                   end
                end)
             local toggle = section:addToggle({
-               text = 'Roll and Luck^',
+               text = 'Roll and Distance',
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
@@ -440,10 +440,11 @@ end
 function farm8()
    spawn(function()
       while getgenv().farm_8b == true do
-             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
-             wait(0.7)
-             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(9.204687118530273, 4.250003814697266, -42.11802291870117)
-             wait(0.1)
+         game:GetService("Players"):Chat("/e dance")
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(16.966123580932617, 6.4532694816589355, -57.951717376708984)
+         wait(getgenv().multspeed1)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8.99483871459961, 55.893798828125, 1702.0216064453125)
+         wait(getgenv().multspeed1)
       end
    end)
 end
@@ -451,10 +452,13 @@ end
 function farm10()
     spawn(function()
        while getgenv().farm_10b == true do
-             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
-             wait(0.7)
-             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(24.51068687438965, 4.250003814697266, -42.25160598754883)
-             wait(0.1)
+         game:GetService("Players"):Chat("/e dance")
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(16.966123580932617, 6.4532694816589355, -57.951717376708984)
+         wait(getgenv().multspeed1)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8.99483871459961, 55.893798828125, 1702.0216064453125)
+         wait(getgenv().multspeed1)
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.81627655029297, 56.7015380859375, 1733.9503173828125)
+         wait(getgenv().multspeed1)
        end
     end)
 end
