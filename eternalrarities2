@@ -112,7 +112,7 @@ do
                   end
                end)
             local toggle = section:addToggle({
-               text = 'Roll and Luck^^',
+               text = 'Roll and Reincarnation',
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
@@ -465,10 +465,21 @@ end
 function farm11()
     spawn(function()
        while getgenv().farm_11b == true do
-             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
-             wait(0.7)
-             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(37.059322357177734, 4.250003814697266, -42.39055252075195)
-             wait(0.1)
+	     game:GetService("Players"):Chat("/e dance")
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(10.850723266601562, 6.115842342376709, -53.59778594970703)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(15.10219669342041, 5.642571449279785, -90.09696197509766)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.592691421508789, 5.467858791351318, -90.37836456298828)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-0.6898682713508606, 5.467858791351318, -90.27534484863281)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.647994518280029, 5.467859268188477, -90.24512481689453)
+             wait(getgenv().multspeed1)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(16.76849365234375, 5.653631210327148, -60.75505065917969)
+wait(0.2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.177762508392334, 5.403866291046143, 84.78218841552734)
+wait()
        end
     end)
 end
