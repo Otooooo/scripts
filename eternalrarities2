@@ -470,7 +470,7 @@ function farm11()
              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-7.647994518280029, 5.467859268188477, -90.24512481689453)
              wait(getgenv().multspeed1)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(16.76849365234375, 5.653631210327148, -60.75505065917969)
-wait(0.2)
+wait(getgenv().multspeed1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.177762508392334, 5.403866291046143, 84.78218841552734)
 wait()
        end
