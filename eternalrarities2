@@ -131,16 +131,18 @@ do
                      farm12()
                   end
                end)
-            local toggle = section:addToggle({
-               text = 'Roll and Luck b',
-               state = false
-            })
-               toggle:bindToEvent('onToggle', function(newState)
-                  getgenv().farm_13b = newState
-                  if newState then
-                     farm13()
-                  end
-               end)
+               section:addButton({
+                  text = 'Unlock all areas', 
+                  style = 'large' -- style of the button, can be 'large' or 'small'
+              }):bindToEvent('onClick', function()
+               local house1Clone = game:GetService("ReplicatedStorage").Unlockables:clone()
+               house1Clone.Parent = game.Workspace.areas
+                  ui.notify({
+                      title = 'ScriptX',
+                      message = 'You unlocked all areas.!',
+                      duration = 3
+                  })
+              end)
            do 
         section:addSlider({
             text = 'Tp time',
@@ -152,6 +154,18 @@ do
             getgenv().multspeed1 = s
             print(newValue)
         end):setTooltip('set the tp time')
+        section:addButton({
+         text = 'Unlock all areas', 
+         style = 'large' -- style of the button, can be 'large' or 'small'
+     }, function() 
+      local house1Clone = game:GetService("ReplicatedStorage").Unlockables:clone()
+      house1Clone.Parent = game.Workspace.areas
+         ui.notify({
+             title = 'ScriptX',
+             message = 'you unlocked all areas!',
+             duration = 3
+         })
+     end):setTooltip('this is a large button')
       local section = menu:addSection({
         text = 'Rune',
         side = 'right',
@@ -269,17 +283,6 @@ do
         side = 'left',
         showMinButton = true,
       })
-          section:addButton({
-            text = 'Anti Cheat Bypass', 
-            style = 'large' -- style of the button, can be 'large' or 'small'
-        }):bindToEvent('onClick', function()
-        game:GetService("Players").LocalPlayer.PlayerScripts.Anti:Destroy() -- Call a function when clicked
-            ui.notify({
-                title = 'OtoHub',
-                message = 'AntiCheat bypassed!',
-                duration = 3
-            })
-        end)
            do 
         section:addSlider({
             text = 'Walkspeed',
