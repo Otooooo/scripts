@@ -241,46 +241,6 @@ local ClonedHouse = game.ReplicatedStorage.Unlockables
                         farm23()
                      end
                   end)
-                     local section = menu:addSection({
-        text = 'Event Rune',
-        side = 'right',
-        showMinButton = true,
-      })
-      do 
-         section:addLabel({
-             text = 'first you need to set the coordinates by' -- Self explanatory
-         })
-      do 
-         section:addLabel({
-             text = 'clicking on "First Step" when you are' -- Self explanatory
-         })
-      do 
-         section:addLabel({
-             text = 'on the rune then you set the ' -- Self explanatory
-         })
-      do 
-         section:addLabel({
-             text = 'coordinates in the text box below.' -- Self explanatory
-         })
-                         section:addButton({
-            text = 'First step', 
-            style = 'large' -- style of the button, can be 'large' or 'small'
-        }):bindToEvent('onClick', function()
-         loadstring(game:HttpGet("https://farmhaxx.glitch.me/sources/cordcopy.txt"))()
-        end)
-        section:addTextbox({
-         text = 'Coordinate here'
-     }):bindToEvent('onFocusLost', function(text) 
-      getgenv().coordinate = (text)
-     end)
-     local toggle = section:addToggle({
-      text = 'Second (start the rune farm)', 
-      state = false -- Starting state of the toggle - doesn't automatically call the callback
-  })
-  
-  toggle:bindToEvent('onToggle', function(newState) -- Call a function when toggled
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new((getgenv().coordinate))
-  end)
      local menu = window:addMenu({
         text = 'Utility'
    })
@@ -389,7 +349,7 @@ end
 
 
 local menu = window:addMenu({
-   text = 'Utility'
+   text = 'Settings'
 })
 section:addButton({
    text = 'Night', 
@@ -428,11 +388,14 @@ section:addButton({
       end)
    ui.notify({
        title = 'ScriptX',
-       message = 'Thanks!!',
+       message = 'Link copied to clipboard!',
        duration = 3
    })
-   end):setTooltip('Link copied to clipboard')
-
+   end):setTooltip('Thanks!')
+   do 
+      section:addLabel({
+          text = 'credit : Oto (owner of ScriptX)' -- Self explanatory
+      })
 ---Single Functions ---
 
 function farm5()
@@ -642,9 +605,6 @@ function farm23()
             wait(0.1)
       end
    end)
-end
-end
-end
 end
 end
 end
