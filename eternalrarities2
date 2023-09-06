@@ -135,8 +135,9 @@ do
                   text = 'Unlock all areas', 
                   style = 'large' -- style of the button, can be 'large' or 'small'
               }):bindToEvent('onClick', function()
-               local house1Clone = game:GetService("ReplicatedStorage").Unlockables:clone()
-               house1Clone.Parent = game.Workspace.areas
+local ClonedHouse = game.ReplicatedStorage.Unlockables
+	ClonedHouse.Parent  =  game.Workspace.Areas
+    ClonedHouse.Name = "Unlockables"
                   ui.notify({
                       title = 'ScriptX',
                       message = 'You unlocked all areas.!',
