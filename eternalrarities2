@@ -154,18 +154,7 @@ do
             getgenv().multspeed1 = s
             print(newValue)
         end):setTooltip('set the tp time')
-        section:addButton({
-         text = 'Unlock all areas', 
-         style = 'large' -- style of the button, can be 'large' or 'small'
-     }, function() 
-      local house1Clone = game:GetService("ReplicatedStorage").Unlockables:clone()
-      house1Clone.Parent = game.Workspace.areas
-         ui.notify({
-             title = 'ScriptX',
-             message = 'you unlocked all areas!',
-             duration = 3
-         })
-     end):setTooltip('this is a large button')
+
       local section = menu:addSection({
         text = 'Rune',
         side = 'right',
