@@ -285,6 +285,7 @@ local ClonedHouse = game.ReplicatedStorage.Unlockables
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
             print(newValue)
 		wait()
+end
         end):setTooltip('FASTTT!!')
                   section:addButton({
             text = 'Noclip', 
