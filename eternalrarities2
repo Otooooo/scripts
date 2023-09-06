@@ -267,7 +267,7 @@ local ClonedHouse = game.ReplicatedStorage.Unlockables
   })
   
   toggle:bindToEvent('onToggle', function(newState) -- Call a function when toggled
-   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(getgenv().coordinate)
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new((getgenv().coordinate))
   end)
      local menu = window:addMenu({
         text = 'Utility'
