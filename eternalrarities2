@@ -248,7 +248,19 @@ local ClonedHouse = game.ReplicatedStorage.Unlockables
       })
       do 
          section:addLabel({
-             text = 'first you need to set the coordinates by clicking on "First Step" then you set the coordinates in the text box below.' -- Self explanatory
+             text = 'first you need to set the coordinates by' -- Self explanatory
+         })
+      do 
+         section:addLabel({
+             text = 'clicking on "First Step" when you are' -- Self explanatory
+         })
+      do 
+         section:addLabel({
+             text = 'on the rune then you set the ' -- Self explanatory
+         })
+      do 
+         section:addLabel({
+             text = 'coordinates in the text box below.' -- Self explanatory
          })
                          section:addButton({
             text = 'First step', 
