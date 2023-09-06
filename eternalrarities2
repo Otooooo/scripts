@@ -284,6 +284,30 @@ local ClonedHouse = game.ReplicatedStorage.Unlockables
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
             print(newValue)
         end):setTooltip('FASTTT!!')
+        section:addButton({
+         text = 'Night', 
+         style = 'large' -- style of the button, can be 'large' or 'small'
+     }, function()
+      game.Lighting.ClockTime = 1
+      game.Lighting.Brightness = 0.01 -- you don't have to always use bindToEvent, just passing a callback normally works fine
+         ui.notify({
+             title = 'ScriptX',
+             message = 'night!',
+             duration = 3
+         })
+     end):setTooltip('this set the night')
+     section:addButton({
+      text = 'Day', 
+      style = 'large' -- style of the button, can be 'large' or 'small'
+  }, function()
+   game.Lighting.ClockTime = 10
+   game.Lighting.Brightness = 2 -- you don't have to always use bindToEvent, just passing a callback normally works fine
+      ui.notify({
+          title = 'ScriptX',
+          message = 'day!',
+          duration = 3
+      })
+  end):setTooltip('this set the night')
                   section:addButton({
             text = 'Noclip', 
             style = 'small' -- style of the button, can be 'large' or 'small'
