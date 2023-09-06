@@ -281,11 +281,8 @@ local ClonedHouse = game.ReplicatedStorage.Unlockables
             step = 0.1,
             val = 10
         }, function(s)
-		while true do
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
             print(newValue)
-		wait()
-end
         end):setTooltip('FASTTT!!')
                   section:addButton({
             text = 'Noclip', 
