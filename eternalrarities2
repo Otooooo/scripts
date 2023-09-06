@@ -8,7 +8,7 @@ local ui = uiLoader({
 
 --- Getgenv ---
 getgenv().multspeed1 = 1.5
-getgenv().multspeed2 = 0.3
+getgenv().coordinate = nil
 getgenv().singlespeed = 0.5
 getgenv().farm2 = 0
 getgenv().attempts = 15
@@ -242,28 +242,33 @@ local ClonedHouse = game.ReplicatedStorage.Unlockables
                      end
                   end)
                      local section = menu:addSection({
-        text = 'Time Rune',
+        text = 'Event Rune',
         side = 'right',
         showMinButton = true,
       })
+      do 
+         section:addLabel({
+             text = 'first you need to set the coordinates by clicking on "First Step" then you set the coordinates in the text box below.' -- Self explanatory
+         })
                          section:addButton({
-            text = 'Hourly Rune', 
-            style = 'small' -- style of the button, can be 'large' or 'small'
+            text = 'First step', 
+            style = 'large' -- style of the button, can be 'large' or 'small'
         }):bindToEvent('onClick', function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(886.1956787109375, 4.250001430511475, 309.2615966796875)
+         loadstring(game:HttpGet("https://farmhaxx.glitch.me/sources/cordcopy.txt"))()
         end)
-                                 section:addButton({
-            text = 'Daily Rune', 
-            style = 'small' -- style of the button, can be 'large' or 'small'
-        }):bindToEvent('onClick', function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(917.1807250976562, 4.250001430511475, 309.4670715332031)
-        end)
-                                      section:addButton({
-            text = 'Weekly Rune', 
-            style = 'small' -- style of the button, can be 'large' or 'small'
-        }):bindToEvent('onClick', function()
-        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(946.64697265625, 4.250001430511475, 309.6517639160156)
-        end)
+        section:addTextbox({
+         text = 'Coordinate here'
+     }):bindToEvent('onFocusLost', function(text) 
+      getgenv().coordinate = (text)
+     end)
+     local toggle = section:addToggle({
+      text = 'Second (start the rune farm)', 
+      state = false -- Starting state of the toggle - doesn't automatically call the callback
+  })
+  
+  toggle:bindToEvent('onToggle', function(newState) -- Call a function when toggled
+   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(getgenv().coordinate)
+  end)
      local menu = window:addMenu({
         text = 'Utility'
    })
@@ -339,11 +344,6 @@ end)
 
 tool.Parent = plr.Backpack
          -- Call a function when clicked
-            ui.notify({
-                title = 'ScriptX',
-                message = 'TeleportTool Gived!',
-                duration = 3
-            })
         end)
                   section:addButton({
             text = 'Infinite Jump', 
@@ -630,6 +630,7 @@ function farm23()
             wait(0.1)
       end
    end)
+end
 end
 end
 end
