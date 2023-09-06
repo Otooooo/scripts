@@ -351,6 +351,11 @@ end
 local menu = window:addMenu({
    text = 'Settings'
 })
+    local section = menu:addSection({
+        text = 'main', -- Title of section
+        side = 'auto', -- Side of the menu that the section is placed on. Defaults to 'auto', but can be 'left' or 'right'
+        showMinButton = true, -- Ability to minimize this section. Defaults to true
+    })
 section:addButton({
    text = 'Night', 
    style = 'small' -- style of the button, can be 'large' or 'small'
