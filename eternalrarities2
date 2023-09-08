@@ -122,7 +122,7 @@ do
                   end
                end)
             local toggle = section:addToggle({
-               text = 'Roll and luck a',
+               text = 'Sacrifice farm',
                state = false
             })
                toggle:bindToEvent('onToggle', function(newState)
@@ -516,9 +516,15 @@ function farm12()
     spawn(function()
        while getgenv().farm_12b == true do
 	     game:GetService("Players"):Chat("/e dance")
-             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-72.0896987915039, 4.250001430511475, -2.838711977005005)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(109.922, 6.998, 4571.785)
              wait(getgenv().multspeed1)
-             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(52.54084014892578, 4.250003814697266, -42.553306579589844)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(142.788, 5.923, 4571.256)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(142.513, 5.881, 4565.181)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(142.132, 5.908, 4557.82)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(168.028, 5.923, 4569.834)
              wait(getgenv().multspeed1)
        end
     end)
