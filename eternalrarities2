@@ -35,6 +35,8 @@ getgenv().farm_20b = false
 getgenv().farm_21b = false
 getgenv().farm_22b = false
 getgenv().farm_23b = false
+getgenv().farm_24b = false
+getgenv().farm_23b = false
 
 local window = ui.newWindow({
     ui.notify({
@@ -149,6 +151,26 @@ do
                   getgenv().farm_14b = newState
                   if newState then
                      farm14()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Honor Farm',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_24b = newState
+                  if newState then
+                     farm24()
+                  end
+               end)
+            local toggle = section:addToggle({
+               text = 'Magic Farm',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_25b = newState
+                  if newState then
+                     farm25()
                   end
                end)
                section:addButton({
@@ -651,6 +673,40 @@ function farm23()
             wait(0.1)
       end
    end)
+end
+function farm24()
+    spawn(function()
+       while getgenv().farm_24b == true do
+game:GetService("Players"):Chat("/e dance")  -- honor
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(751.0840454101562, 14.891979217529297, 4104.80078125)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(730.998046875, 14.820707321166992, 4344.48486328125)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(862.2225952148438, 26.887683868408203, 4157.97900390625)
+             wait(getgenv().multspeed1)
+       end
+    end)
+end
+function farm25()
+    spawn(function()
+       while getgenv().farm_25b == true do
+game:GetService("Players"):Chat("/e dance")
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2012.95654296875, 7.1475749015808105, -731.0379638671875)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2010.1787109375, 6.072457790374756, -703.0277709960938)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2007.9256591796875, 6.072457790374756, -709.1177978515625)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2005.63427734375, 6.072457790374756, -715.6072998046875)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2026.4876708984375, 6.072457790374756, -733.3731689453125)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2033.6387939453125, 6.072457790374756, -733.2131958007812)
+             wait(getgenv().multspeed1)
+             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2040.5450439453125, 6.1467719078063965, -732.990478515625)
+             wait(getgenv().multspeed1)
+       end
+    end)
 end
 end
 end
