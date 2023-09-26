@@ -738,7 +738,7 @@ game:GetService("Players"):Chat("/e dance")
 end
 function farm26()
    spawn(function()
-      while getgenv().farm_23b == true do
+      while getgenv().farm_26b == true do
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2014.21923828125, 6.918060779571533, -653.203857421875)
             wait(1)
       end
@@ -746,7 +746,7 @@ function farm26()
 end
 function farm27()
    spawn(function()
-      while getgenv().farm_23b == true do
+      while getgenv().farm_27b == true do
          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2097.326904296875, 10.975377082824707, -735.9527587890625)
             wait(1)
       end
