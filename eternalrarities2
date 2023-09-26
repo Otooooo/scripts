@@ -37,6 +37,8 @@ getgenv().farm_22b = false
 getgenv().farm_23b = false
 getgenv().farm_24b = false
 getgenv().farm_23b = false
+getgenv().farm_26b = false
+getgenv().farm_27b = false
 
 local window = ui.newWindow({
     ui.notify({
@@ -283,6 +285,26 @@ local ClonedHouse = game.ReplicatedStorage.Unlockables
                         farm23()
                      end
                   end)
+                                            local toggle = section:addToggle({
+               text = 'Magic Rune',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_26b = newState
+                  if newState then
+                     farm26()
+                  end
+               end)
+                                            local toggle = section:addToggle({
+               text = 'Alchemy Rune',
+               state = false
+            })
+               toggle:bindToEvent('onToggle', function(newState)
+                  getgenv().farm_27b = newState
+                  if newState then
+                     farm27()
+                  end
+               end)
      local menu = window:addMenu({
         text = 'Utility'
    })
@@ -713,6 +735,22 @@ game:GetService("Players"):Chat("/e dance")
              wait(getgenv().multspeed1)
        end
     end)
+end
+function farm26()
+   spawn(function()
+      while getgenv().farm_23b == true do
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2014.21923828125, 6.918060779571533, -653.203857421875)
+            wait(1)
+      end
+   end)
+end
+function farm27()
+   spawn(function()
+      while getgenv().farm_23b == true do
+         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2097.326904296875, 10.975377082824707, -735.9527587890625)
+            wait(1)
+      end
+   end)
 end
 end
 end
