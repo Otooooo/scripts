@@ -460,6 +460,35 @@ toclipboard("https://discord.gg/AKQWuAEnGC")
       section:addLabel({
           text = 'credit : Oto (owner of ScriptX)' -- Self explanatory
       })
+      local menu = window:addMenu({
+         text = 'Stats Changer'
+    })
+    do
+         local section = menu:addSection({
+         text = 'Stats',
+         side = 'left',
+         showMinButton = true,
+       })
+       do 
+         section:addSlider({
+             text = 'Tickets (reset every 5 minutes)',
+             min = 1,
+             max = 1000000,
+             step = 0.01,
+             val = 50
+         }, function(newValuea) 
+            game.Players.LocalPlayer.TicketInfo.Amount.Value = (newValuea)
+         end)
+         do 
+            section:addSlider({
+                text = 'Rune Token',
+                min = 1,
+                max = 1000000,
+                step = 0.01,
+                val = 50
+            }, function(newValueaa) 
+               game.Players.LocalPlayer.Stats.RuneToken.Value = (newValueaa)
+            end)
 ---Single Functions ---
 
 function farm5()
@@ -751,6 +780,9 @@ function farm27()
             wait(1)
       end
    end)
+end
+end
+end
 end
 end
 end
